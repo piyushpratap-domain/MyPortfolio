@@ -1,0 +1,596 @@
+:root{
+  --clr-dark:#070a13;
+  --clr-light:#f1f5f9;
+  --clr-slate400:#94a3b8;
+  --clr-slate600:#475569;
+  --clr-slate800:#1e293b;
+  --clr-rose:#e11d48;
+  --clr-indigo:#4f46e5;
+}
+
+/*HEADER SECTION*/
+.header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 9999;
+}
+.header__menu{
+  display: none;
+}
+.header__bars{
+  color: var(--clr-light);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+.header__resume{
+  font-size: 0.75rem;
+}
+
+
+/*HERO SECTION*/
+.hero{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero__img{
+  display: inline;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+}
+
+.hero__name{
+  color: var(--clr-slate600);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.hero__title{
+  color: var(--clr-slate400);
+  font-size: 2.25rem;
+}
+
+.hero__intro{
+  margin-top: 0.5rem;
+  color: var(--clr-slate600);
+  font-size: 0.875rem;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__btn{
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* ABOUT SECTION */
+.about{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about__content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about__title{
+  font-size: 1.5rem;
+  color: var(--clr-light);
+}
+
+.about__desc{
+  max-width: 60ch;
+  font-size: 0.875rem;
+  color: var(--clr-slate600);
+}
+
+.about__tech{
+  font-size: 0.875rem;
+  color: var(--clr-slate400);
+}
+
+.about__ul_container{
+  display: flex;
+  gap: 8em;
+}
+
+.about__ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: "✅";  
+  padding-left: 1em;
+}
+
+.about__li{
+  font-size: 0.875rem;
+  color: var(--clr-slate600);
+}
+
+.about__li::before{
+  content: "";
+  margin-left: 0.5em;
+}
+
+/* WORK SECTION */
+
+
+.work__project-title{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.work__title{
+  color: var(--clr-light);
+  font-size: 1.5rem;
+}
+
+.work__desc{
+  max-width: 60ch;
+  font-size: 0.875rem;
+  color: var(--clr-slate600);
+  margin: 1rem auto;
+}
+
+.work{
+  text-align: center;
+}
+
+.work__img-wrapper{
+  position: relative;
+}
+
+.work__img-wrapper::after{
+  content: " ";
+  background-color: rgba(79, 70, 229, 0.4);
+  width: 100%;
+  height: 100%;position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.work__img-wrapper:hover::after{
+  background-color: rgba(79, 70, 229, 0.3);
+}
+
+.work__project-desc{
+  font-size: 0.875rem;
+  color: var(--clr-slate600);
+  margin: 1rem 0;
+}
+
+.work__btn{
+  font-size: 0.875rem;
+}
+.work__project{
+  margin-bottom: 5rem;
+}
+
+.work__project-sub{
+  display: none;
+}
+
+/* CONTACT SECTION */
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.contact__title{
+  color: var(--clr-light);
+  font-size: 1.5rem;
+}
+
+.contact__desc{
+  color: var(--clr-slate400);
+  font-size: 0.875rem;
+}
+
+.contact__btn{
+  font-size: 0.875rem;
+}
+
+/* FOOTER SECTION */
+
+.footer__title {
+  display: flex;
+  justify-content: center;
+  font-size: var(--size-xs);
+  font-weight: 400;
+  color: var(--clr-slate600);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  user-select: none;
+}
+
+
+@media (min-width: 360px) {
+  .hero{
+    margin-top: 1rem;
+  }
+  
+  .hero__img{
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  
+  .hero__name{
+    font-size: 1.125rem;
+    margin-top: 1rem;
+  }
+  
+  .hero__title{
+    font-size: 3rem;
+  }
+  
+  .hero__intro{
+    font-size: 1rem;
+  }
+  
+  .hero__btn{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  .about{
+    gap: 1.5rem;
+  }
+  
+  .about__content{
+    gap: 1.5rem;
+  }
+  
+  .about__title{
+    font-size: 1.875rem;
+  }
+  
+  .about__desc{
+    font-size: 1rem;
+  }
+  
+  .about__tech{
+    font-size: 1rem;
+  }
+  
+  .about__ul_container{
+    display: flex;
+    gap: 8em;
+  }
+  
+  .about__li{
+    font-size: 1rem;
+  }
+  
+  .work__title{
+    font-size: 1.75rem;
+  }
+  
+  .work__desc{
+    font-size: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .work__project-title{
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .work__project-desc{
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .work__btn{
+    font-size: 1rem;
+  }
+
+  .contact {
+    gap: 1.5rem;
+  }
+
+  .contact__title {
+    font-size: 1.875rem;
+  }
+
+  .contact__desc {
+    font-size: 0.875rem;
+  }
+
+  .contact__btn {
+    font-size: 0.875rem;
+  }
+  
+}
+
+@media (min-width: 480px) {
+  .about__img{
+    width: 48.5625rem;
+  }
+
+  .work__conatiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "image1 content1"
+    "content2 image2";
+    place-items: center;
+  }
+
+  .work__image1{
+    grid-area:image1;
+  }
+  .work__image2{
+    grid-area:image2;
+  }
+
+  .work__content1{
+    grid-area:content1;
+  }
+  .work__content2{
+    grid-area:content2;
+  }
+
+  .work__project-title{
+    display: none;
+  }
+
+  .work__project-desc{
+    font-size: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .work__btn{
+    font-size: 0.75rem;
+  }
+  .work__project{
+    margin: 0 1rem;
+  }
+  .work__project-sub{
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .header__menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    gap: 2em;
+  }
+  
+  .header__link{
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--clr-slate600);
+    transition: color 0.3s;
+  }
+  
+  .header__sun{
+    display: block;
+    color: var(--clr-slate600);
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  .header__link:hover{
+    color: var(--clr-rose);
+  }
+  .header__bars{
+    display: none;
+  }
+  .work__project-desc{
+    font-size: 0.875rem;
+  }
+
+  .work__btn{
+    font-size: 0.875rem;
+  }
+  
+  .work__project-sub{
+    display: block;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .header__link{
+    font-size: 0.875rem;
+  }
+
+  .header__sun{
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  .hero__img{
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .hero__name{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .hero__title{
+    font-size: 4.5rem;
+  }
+  
+  .hero__intro{
+    font-size: 1.125rem;
+  }
+  
+  .hero__btn{
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .about{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about__title{
+    font-size: 2.25rem;
+  }
+  
+  .about__desc{
+    font-size: 1.125rem;
+  }
+  
+  .about__tech{
+    font-size: 1.125rem;
+  }
+  
+  .about__li{
+    font-size: 1.125rem;
+  }
+
+  .work__title{
+    font-size: 2.25rem;
+  }
+  
+  .work__desc{
+    font-size: 1.125rem;
+    margin: 1.5rem auto;
+  }
+
+  .work__project-desc{
+    font-size: 1rem;
+  }
+
+  .work__btn{
+    font-size: 1rem;
+  }
+  
+  .work__project-sub{
+    display: block;
+    font-size: 1.25rem;
+  }
+
+  .contact__title {
+    font-size: 2.25rem;
+  }
+
+  .contact__desc {
+    font-size: 1.125rem;
+  }
+
+  .contact__btn {
+    font-size: 1.125rem;
+  }
+  
+}
+
+@media (min-width: 1280px) {
+
+  
+  .hero__img{
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .hero__name{
+    font-size: 2.25rem;
+    margin-top: 1rem;
+  }
+  
+  .hero__title{
+    font-size: 6rem;
+  }
+  
+  .hero__intro{
+    font-size: 1.25rem;
+  }
+  
+  .hero__btn{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .about{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about__content{
+    gap: 2rem;
+  }
+
+  .about__title{
+    font-size: 3rem;
+  }
+  
+  .about__desc{
+    font-size: 1.25rem;
+  }
+  
+  .about__tech{
+    font-size: 1.25rem;
+  }
+  
+  .about__li{
+    font-size: 1.25rem;
+  }
+  .work__title{
+    font-size: 3rem;
+  }
+  
+  .work__desc{
+    font-size: 1.25rem;
+    margin: 2rem auto;
+  }
+
+  .work__project-desc{
+    font-size: 1.125rem;
+  }
+
+  .work__btn{
+    font-size: 1.125rem;
+  }
+  
+  .work__project-sub{
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .work__conatiner{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact {
+    gap: 2rem;
+  }
+
+  .contact__title {
+    font-size: 3rem;
+  }
+
+  .contact__desc {
+    font-size: 1.25rem;
+  }
+
+  .contact__btn {
+    font-size: 1.25rem;
+  }
+}
